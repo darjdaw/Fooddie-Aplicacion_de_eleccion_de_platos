@@ -1,12 +1,11 @@
 # Brief del proyecto: Fooddie
-<!---
-El brief de proyecto es un documento breve que explica qué vas a construir, para quién y cómo sabrás si el diseño funciona. Tiene una particularidad: es el primero que empiezas y el último que terminas. Lo comienzas el primer día con tu hipótesis y lo cierras cuatro semanas después, cuando ya puedes apoyar cada afirmación con los datos de tu investigación. Si al final de la órbita tu brief se parece demasiado a lo que escribiste el primer día, conviene que te preguntes si la investigación ha cambiado algo de lo que pensabas.
--->
 
 En éste proyecto vamos a plantear la construcción de una aplicación Web o aplicación para dispositivos móviles en la que gran variedad de usuarios puedan encontrar una manera fácil de escoger que comida a domicilio o a qué establecimiento acudir en grupo. 
 No se pretende crear una plataforma de pedido a domicilio ni un agente IA que recomiende platos, nos apoyamos directamente en el concepto de tener una plataforma para crear listas de deseo y colecciones de comida con diferentes temas para ponerlas en común con otros usuarios y ya sea por propia conciliación o por hacer un pequeño sorteo con las opciones propuestas, se pueda decidir que tomar.
 
 Se considerará el diseño como funcional si tras realizar un pequeño prototipo y ponerlo a prueba como plantearemos posteriormente en este documento encontramos satisfactoria la experiencia del usuario, proponiendo un flujo y diseños intuitivos y que se adapten a las necesidades de potenciales usuarios.
+
+# Órbita 1: Conocer a las personas
 
 ## El problema que resuelve la aplicación
 <!---
