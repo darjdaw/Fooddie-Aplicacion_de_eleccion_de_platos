@@ -9,7 +9,7 @@ Esta es una herramienta de gestión, organización y cálculo; no realiza venta 
 
 ## Propuesta de Valor
 
-**Fooddie** transforma el eterno dilema de "¿Qué pedimos?"* y la frustración del **análisis-parálisis** en un juego rápido, colaborativo y sin fricciones.
+**Fooddie** transforma el eterno dilema de "¿Qué pedimos?" y la frustración del **análisis-parálisis** en un juego rápido, colaborativo y sin fricciones.
 
 Frente a la parálisis por indecisión y la inercia de pedir siempre lo mismo por comodidad, nuestra aplicación actúa como un facilitador social estructurado:
 
