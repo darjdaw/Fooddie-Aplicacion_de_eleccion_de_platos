@@ -9,23 +9,23 @@ Esta es una herramienta de gestión, organización y cálculo; no realiza venta 
 
 ## Propuesta de Valor
 
-**Fooddie** transforma el eterno dilema de *"¿Qué pedimos?"* y la frustración del **análisis-parálisis** en un juego rápido, colaborativo y sin fricciones.
+**Fooddie** transforma el eterno dilema de "¿Qué pedimos?"* y la frustración del **análisis-parálisis** en un juego rápido, colaborativo y sin fricciones.
 
 Frente a la parálisis por indecisión y la inercia de pedir siempre lo mismo por comodidad, nuestra aplicación actúa como un facilitador social estructurado:
 
-##### Adiós al Análisis-Parálisis:
+#### Adiós al Análisis-Parálisis:
 
 Centraliza las opciones en colecciones ordenadas y filtrables (`tema-*`, `plato-*`, `sitio-*`). Cuando el grupo se bloquea, el **Sorteo de Platos (el "dado")** toma la decisión por vosotros de forma lúdica y justa, eliminando la carga mental de decidir.
 
-##### Rompe la monotonía:
+#### Rompe la monotonía:
 
 Te anima a explorar y alternar entre tus platos guardados o propuestas nuevas, sacándote de la rutina de pedir siempre el mismo plato por inercia.
 
-##### Consenso sin discusiones:
+#### Consenso sin discusiones:
 
 Permite que cada comensal aporte su sugerencia al grupo en segundos, democratizando la elección del lugar o la temática de la comida.
 
-##### Cuentas claras desde el minuto uno:
+#### Cuentas claras desde el minuto uno:
 
 Una vez decidido el plan, olvídate de las matemáticas complejas al final. El Reparto de Gastos automatiza de forma transparente lo que consume cada uno frente a lo que se comparte (como unos entrantes o una botella al centro), calculando la cifra exacta que debe pagar cada comensal sin malentendidos ni discusiones posteriores.
 
@@ -35,11 +35,16 @@ En el MVP se van a abordar 2 funcionalidades principales de la aplicación web e
 
 ### Modo A: Sorteo de Platos / Lugares
 
-Cuando el grupo aún no sabe qué comer: * Cada comensal propone una opción (un tema, un plato genérico o un establecimiento concreto). * **Lanzamiento de "Dado":** El sistema selecciona de forma aleatoria una de las propuestas del grupo para tomar la decisión final sin discusiones.
+Cuando el grupo aún no sabe qué comer: 
+- Cada comensal propone una opción (un tema, un plato genérico o un establecimiento concreto).
+- Lanzamiento de "Dado": El sistema selecciona de forma aleatoria una de las propuestas del grupo para tomar la decisión final sin discusiones.
 
 ### Modo B: Reparto de Gastos (División de Cuenta)
 
-Una vez que el grupo ya está comiendo o ha decidido el pedido: * **Cuentas individuales:** Cada comensal añade los artículos que ha consumido de forma personal. * **Cuenta conjunta:** Espacio común para añadir artículos compartidos (ej. *nachos al centro, botella de agua grande*), cuyo costo se divide equitativamente entre todos los integrantes. * **Desglose transparente:** Cálculo automático de `Gasto Individual + Parte Proporcional Conjunta`, mostrando la cifra exacta que debe pagar cada persona.
+Una vez que el grupo ya está comiendo o ha decidido el pedido:  
+- Cuentas individuales: Cada comensal añade los artículos que ha consumido de forma personal.
+- Cuenta conjunta: Espacio común para añadir artículos compartidos (ej. *nachos al centro, botella de agua grande*), cuyo costo se divide equitativamente entre todos los integrantes.
+- Desglose transparente: Cálculo automático de `Gasto Individual + Parte Proporcional Conjunta`, mostrando la cifra exacta que debe pagar cada persona.
 
 ## Funcionalidades que no estan en MVP
 
