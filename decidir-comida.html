@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <title>Decidir Comida - Fooddie</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-container">
+    <a href="index.html" class="logo-link">
+      <img src="src/img/fooddie.svg" alt="fooddie" class="logo-img">
+    </a>
+
+    <div class="search-container">
+      <input type="text" class="search-bar" placeholder="Buscar...">
+    </div>
+
+    <div class="header-spacer"></div>
+
+    <div class="action-icons">
+      <button class="icon-btn">
+        <img src="src/img/icon-share.svg" alt="Compartir" class="nav-icon">
+      </button>
+      <button class="icon-btn">
+        <img src="src/img/icon-history.svg" alt="Historial" class="nav-icon">
+      </button>
+      <button class="icon-btn">
+        <img src="src/img/icon-notifications.svg" alt="Avisos" class="nav-icon">
+      </button>
+      <button class="icon-btn">
+        <img src="src/img/icon-darkmode.svg" alt="Modo nocturno" class="nav-icon">
+      </button>
+    </div>
+
+    <div class="user-block">
+      <span class="welcome-text">Bienvenido, usuario/a</span>
+      <button class="burger-btn">
+        <img src="src/img/burger.svg" alt="Menú" class="nav-icon">
+      </button>
+      <img src="src/img/profile-avatar.jpg" alt="Foto de perfil" class="profile-img">
+    </div>
+  </div>
+</header>
+
+<main class="main-content"> 
+
+  <div class="order-layout-grid">
+    
+    <section class="section-platos">
+      <h2 class="section-title-left">AÑADE IDEAS Y HACED<br>SORTEO</h2>
+      <p class="section-subtitle-left">Podéis seguir haciendo sorteos hasta que os pongáis<br>de acuerdo en qué pedir</p>
+      
+      <div class="platos-list">
+        <article class="plato-card">
+          <div class="plato-img-bg" style="background-image: url('src/img/plato-ejemplo.jpg');"></div>
+          <div class="plato-info">
+            <h3 class="plato-title">Lorem ipsum dolor<br>sit amet.</h3>
+            <p class="plato-description">Lorem ipsum dolor sit amet consectetur. Ut et turpis euismod malesuada imperdiet natoque.</p>
+          </div>
+          <span class="plato-quantity">x1</span>
+        </article>
+
+        <article class="plato-card">
+          <div class="plato-img-bg" style="background-image: url('src/img/plato-ejemplo.jpg');"></div>
+          <div class="plato-info">
+            <h3 class="plato-title">Lorem ipsum dolor<br>sit amet.</h3>
+            <p class="plato-description">Lorem ipsum dolor sit amet consectetur. Ut et turpis euismod malesuada imperdiet natoque.</p>
+          </div>
+          <span class="plato-quantity">x1</span>
+        </article>
+      </div>
+    </section>
+
+    <aside class="section-comensales">
+      <h2 class="section-title-right">COMENSALES</h2>
+
+      <div class="comensales-box">
+        <div class="grupo-resumen">
+          <p><strong>GRUPO</strong></p>
+        </div>
+
+        <div class="user-row">
+          <div class="user-data">
+            <span class="user-name">USER 1</span>
+          </div>
+          <button class="remove-btn">✕</button>
+        </div>
+
+        <div class="user-row">
+          <div class="user-data">
+            <span class="user-name">USER 2</span>
+          </div>
+          <button class="remove-btn">✕</button>
+        </div>
+
+        <div class="user-row">
+          <div class="user-data">
+            <span class="user-name">USER 3</span>
+          </div>
+          <button class="remove-btn">✕</button>
+        </div>
+
+        <div class="add-user-container">
+          <button class="add-circle-btn">+</button>
+        </div>
+
+        <div class="grupo-codigo">
+          <span>Código grupo: <strong>asd123?!</strong></span>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+
+  <div class="center-add-action">
+    <button class="add-circle-large">+</button>
+  </div>
+
+  <!-- Carrusel de tarjetas -->
+  <section class="section-discovery">
+    <h2 class="section-title">Quizas te interese</h2>
+      
+      <div class="carousel-container">
+        <div class="food-cards-grid">
+          <article class="food-card">
+            <div class="card-img-placeholder"></div>
+            <div class="card-content">
+              <h3 class="card-title">Lorem ipsum dolor sit</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur. In dictum tincidunt velit semper. Dolor vitae sollicitudin velit mi diam sit suspendisse.</p>
+            </div>
+          </article>
+
+          <article class="food-card">
+            <div class="card-img-placeholder"></div>
+            <div class="card-content">
+              <h3 class="card-title">Lorem ipsum dolor sit</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur. In dictum tincidunt velit semper. Dolor vitae sollicitudin velit mi diam sit suspendisse.</p>
+            </div>
+          </article>
+
+          <article class="food-card">
+            <div class="card-img-placeholder"></div>
+            <div class="card-content">
+              <h3 class="card-title">Lorem ipsum dolor sit</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur. In dictum tincidunt velit semper. Dolor vitae sollicitudin velit mi diam sit suspendisse.</p>
+            </div>
+          </article>
+
+          <article class="food-card">
+            <div class="card-img-placeholder"></div>
+            <div class="card-content">
+              <h3 class="card-title">Lorem ipsum dolor sit</h3>
+              <p class="card-text">Lorem ipsum dolor sit amet consectetur. In dictum tincidunt velit semper. Dolor vitae sollicitudin velit mi diam sit suspendisse.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <a href="#" class="cookie-policy">Política de cookies</a>
+    <p class="copyright">© 2026 Cádiz</p>
+  </div>
+</footer>
+
+</body>
+</html>
