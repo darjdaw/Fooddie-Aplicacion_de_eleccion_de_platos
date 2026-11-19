@@ -1,0 +1,44 @@
+/*
+   ELEMENTS — _elements.scss
+*/
+
+body {
+   font-family: var(--font-sans); 
+   font-weight: var(--font-weight-medium);
+   font-size: var(--text-body);
+   line-height: var(--leading-body);
+   letter-spacing: 0;
+   color: var(--texto-principal);
+   background-color: var(--color-surface);
+}
+
+h1 {
+   font-family: var(--font-display);
+   font-size: var(--text-display);
+   line-height: var(--leading-display);
+   color: var(--color-title);
+}
+
+h2 {
+   font-family: var(--font-serif);
+   font-size: var(--text-heading);
+   font-weight: var(--font-weight-semibold);
+   line-height: var(--leading-heading);
+}
+
+h3 {
+   font-family: var(--font-sans);
+   font-size: var(--text-element-name);
+   font-weight: var(--font-weight-bold);
+   line-height: var(--leading-element-name);
+}
+
+p {
+   max-width: 65ch;
+}
+
+button {
+   cursor: pointer;
+   background: none;
+   border: none;
+}

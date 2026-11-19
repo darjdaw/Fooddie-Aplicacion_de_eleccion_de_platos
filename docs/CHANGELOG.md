@@ -13,4 +13,8 @@ Documentación de uso de IA en el proyecto
 
 
 ### Modo oscuro
-     Prompt: Usanod como referencia la variable que he creado de la pantalla principal en modo oscuro, compárala con la versión original y define las variables para us reutilización.
+     Prompt: Usando como referencia la variable que he creado de la pantalla principal en modo oscuro, compárala con la versión original y define las variables para us reutilización.
+
+
+### Reset, estilos de etiquetas, objetos
+Escribe el reset, los estilos de las etiquetas y los objetos (contenedor, pila, cuadrícula). A que se refiere con eso? redactame un ejemplo y comparámelo con estas pantallas (Captura de pantalla de una pantalla principal)

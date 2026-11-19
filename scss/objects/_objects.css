@@ -1,0 +1,35 @@
+/* ==========================================================================
+   OBJECTS — _objects.scss - Esto no lo entiendo, es copia pega de IA - Por favor explicamelo en clase.
+   ========================================================================== */
+
+/* Contenedor: centra y limita el ancho máximo con margen lateral */
+
+.o-container {
+  width: min(100% - (var(--space-card-inset) * 2), 75rem);
+  margin-inline: auto;
+}
+
+/* Pila (Stack): apila elementos en vertical con separación uniforme */
+.o-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--stack-gap, var(--space-group-gap));
+}
+
+.o-stack--tight {
+  --stack-gap: var(--space-control-gap);
+}
+
+.o-stack--loose {
+  --stack-gap: var(--space-section-gap);
+}
+
+/* Cuadrícula (Grid): distribuye elementos en columnas responsivas */
+.o-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, var(--grid-min, 16rem)), 1fr)
+  );
+  gap: var(--grid-gap, var(--space-group-gap));
+}
