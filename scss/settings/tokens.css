@@ -1,0 +1,150 @@
+/*
+   DESIGN TOKENS — scss/settings/_tokens.scss
+ */
+
+:root {
+/* Convierte cada variable de Figma en una propiedad personalizada **con el mismo nombre** que su sintaxis de código: los primitivos con su valor, los semánticos apuntando a un primitivo y el modo oscuro con `light-dark()`. Incluye la tipografía (en `rem`), el espaciado, los radios y la elevación.*/
+
+/*
+   1. PRIMITIVOS — COLORES
+*/
+
+   /* Primario: rojo cadmio */
+      --colour-primary-900: #5c1720;
+      --colour-primary: #e63946;    /* Base */
+      --colour-primary-350: #ee747e;
+      --colour-primary-200: #f7b0b6;
+
+   /* Secundario: azul turquesa */
+      --colour-secondary-900: #153f4a;
+      --colour-secondary: #45b7d1;        /* Base */
+      --colour-secondary-200: #b5e2ed;
+
+   /* Terciario: amarillo mostaza */
+      --colour-tertiary-700: #a85c23;
+      --colour-tertiary: #f4a261;         /* Base */
+      --colour-tertiary-200: #fbe0c8;
+
+   /* Neutros y base del sistema */
+      --night-blue: #1d3557;
+      --cream-white: #f4f3f2;
+      --pure-white: #ffffff;                 /* Usado en Light/Dark Mode */
+      --ink-black: #1d1b20;              /* Usado en icono-navegacion (Light) */
+      --gray-300: #d9d9d9;              /* Usado en fondo-control (Light) */
+
+/* 
+   2. PRIMITIVOS — ESPACIADO (Base 16px -> rem)
+*/
+
+      --space-close-1: 0.25rem;          /* 4px */
+      --space-close-2: 0.5rem;           /* 8px */
+      --space-close-3: 0.75rem;          /* 12px */
+      --space-medium-4: 1rem;            /* 16px */
+      --space-medium-6: 1.5rem;          /* 24px */
+      --space-medium-8: 2rem;            /* 32px */
+      --space-long-10: 2.5rem;           /* 40px */
+      --space-long-16: 4rem;             /* 64px */
+      --space-very-long-20: 5rem;        /* 80px */
+      --space-very-long-28: 7rem;        /* 112px */
+
+   /* Alias numéricos referenciados en tokens semánticos */
+      --space-2: var(--space-close-2);   /* 8px */
+      --space-3: var(--space-close-3);   /* 12px */
+      --space-6: var(--space-medium-6);  /* 24px */
+      --space-8: var(--space-medium-8);  /* 32px */
+      --space-16: var(--space-long-16);  /* 64px */
+
+/*
+   3. TIPOGRAFÍA (Familias, tamaños y alturas de línea en rem)
+*/
+
+      --font-display: 'Monoton', cursive, sans-serif;
+      --font-serif: 'Roboto Slab', Georgia, serif;
+      --font-sans: 'Montserrat', system-ui, sans-serif;
+
+   /* Pesos tipográficos */
+      --font-weight-medium: 500;
+      --font-weight-semibold: 600;
+      --font-weight-bold: 700;
+
+   /* Tamaños de fuente (px / 16 = rem) */
+      --text-display: 3.5rem;            /* 56px */
+      --text-title: 2.5rem;              /* 40px */
+      --text-over-image-title: 2rem;     /* 32px */
+      --text-heading: 1.75rem;           /* 28px */
+      --text-element-name: 1.25rem;      /* 20px */
+      --text-body: 1rem;                 /* 16px */
+      --text-over-image-body: 1rem;      /* 16px */
+      --text-menu: 0.875rem;             /* 14px */
+      --text-notification: 0.875rem;     /* 14px */
+
+   /* Alturas de línea (line-height en rem) */
+      --leading-display: 4rem;           /* 64px */
+      --leading-title: 3rem;             /* 48px */
+      --leading-over-image-title: 2.5rem;/* 40px */
+      --leading-heading: 2.25rem;        /* 36px */
+      --leading-element-name: 1.5rem;    /* 24px */
+      --leading-body: 1.5rem;            /* 24px */
+      --leading-over-image-body: 1.5rem; /* 24px */
+      --leading-menu: 1.25rem;           /* 20px */
+      --leading-notification: 1.25rem;   /* 20px */
+
+/* 
+   4. RADIOS Y ELEVACIÓN
+*/
+
+   /* Radios (ajusta si tienes valores específicos en Figma) */
+      --radius-none: 0rem;
+      --radius-sm: 0.25rem;              /* 4px */
+      --radius-md: 0.5rem;               /* 8px */
+      --radius-lg: 1rem;                 /* 16px */
+      --radius-full: 9999px;
+
+   /* Elevación: Sombra paralela X: 8, Y: 8, Desenfoque: 0, Propagación: 0, #1D3557 100% */
+      --elevation-default: 0.5rem 0.5rem 0 0 var(--night-blue);
+      --elevation-none: none;
+
+/* 
+   5. TOKENS SEMÁNTICOS Y MODO OSCURO (con light-dark())
+*/
+
+   /* Semánticos de color */
+      --color-action: light-dark(var(--colour-primary), var(--colour-primary-350));
+      --color-info: light-dark(var(--colour-secondary), var(--colour-secondary-200));
+      --color-highlight: light-dark(var(--colour-tertiary), var(--colour-tertiary));
+      --color-text: light-dark(var(--night-blue), var(--cream-white));
+      --color-surface: light-dark(var(--cream-white), var(--night-blue));
+
+   /* Semántico de elevación */
+      --elevation-card: light-dark(var(--elevation-default), var(--elevation-default));
+
+   /* Semánticos de espaciado */
+      --space-inline: var(--space-2);            /* 8px */
+      --space-control-gap: var(--space-3);       /* 12px */
+      --space-card-inset: var(--space-6);        /* 24px */
+      --space-group-gap: var(--space-8);         /* 32px */
+      --space-section-gap: var(--space-16);      /* 64px */
+
+   /* Variables de tema (Light Mode / Dark Mode) */
+      --nav-bar: light-dark(var(--cream-white), var(--colour-secondary-900));
+      --background: light-dark(var(--pure-white), var(--pure-white));
+      --frame: light-dark(var(--colour-secondary-200), var(--colour-secondary-900));
+
+   /* Grupo: menu */
+      --menu-fondo: light-dark(var(--pure-white), var(--night-blue));
+      --menu-icono-navegacion: light-dark(var(--ink-black), var(--cream-white));
+      --menu-fondo-pie: light-dark(var(--night-blue), var(--colour-secondary-900));
+      --menu-fondo-miniatura: light-dark(var(--colour-secondary-900), var(--colour-secondary-200));
+      --menu-titulo-tarjeta: light-dark(var(--night-blue), var(--colour-secondary-200));
+      --menu-texto-principal: light-dark(var(--night-blue), var(--cream-white));
+      --menu-texto-alternativo: light-dark(var(--night-blue), var(--colour-secondary-200));
+      --menu-fondo-control: light-dark(var(--gray-300), var(--cream-white));
+      --menu-fondo-buscador: light-dark(var(--colour-secondary-900), var(--colour-secondary-200));
+      --menu-texto-buscador: light-dark(var(--colour-tertiary), var(--colour-primary));
+      --menu-night-mode-active: light-dark(var(--colour-primary), var(--colour-tertiary));
+
+   /* Grupo: pedido */
+      --pedido-opacidad-fondo: light-dark(0.2, 1);       /* 20% -> 100% */
+      --pedido-opacidad-patron: light-dark(0.2, 0.3);    /* 20% -> 30% */
+      --pedido-color-fondo: light-dark(var(--cream-white), var(--menu-fondo));
+}
