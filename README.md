@@ -110,7 +110,7 @@ La lista de funcionalidades del proyecto, partida en piezas pequeñas y ordenada
 
 Que vistas tiene la app y que datos muestra cada una.
 
-### Login
+- #### Login
 
    Encabezado / Bienvenida: Título "BIENVENIDO A FOODDIE" y un texto descriptivo de bienvenida. 
 
@@ -118,7 +118,7 @@ Que vistas tiene la app y que datos muestra cada una.
 
    Opciones adicionales y registro: Tres bloques cuadrados de colores (rojo, azul y naranja), enlace "¿No tienes cuenta? Regístrate" y una insignia/sello decorativo rojo en el lateral derecho.
 
-### Menú principal
+- #### Menú principal
 
    Barra superior (Header): Logo de Fooddie, barra de búsqueda redondeada, iconos de acción (compartir, historial, avisos, modo nocturno), saludo "Bienvenido/a, usuario", menú hamburguesa y foto de perfil.
 
@@ -130,7 +130,7 @@ Que vistas tiene la app y que datos muestra cada una.
 
    Pie de página (Footer): Enlace "Política de cookies" y aviso de copyright "© 2026 Cádiz".
 
-### Organizar pedido
+- #### Organizar pedido
 
    Barra superior y Footer: Mantienen la misma estructura de navegación y cierre que el menú principal.   
 
@@ -140,7 +140,7 @@ Que vistas tiene la app y que datos muestra cada una.
 
    Acciones y sugerencias: Botón central + para añadir elementos y bloque inferior "Quizas te interese" con cuatro tarjetas.   
 
-### Decidir comida
+- #### Decidir comida
 
    Barra superior y Footer: Misma estructura general. 
 
@@ -150,7 +150,7 @@ Que vistas tiene la app y que datos muestra cada una.
 
    Acciones y sugerencias: Botón central + y sección "Quizas te interese" con cuatro tarjetas.   
 
-### Mis colecciones
+- #### Mis colecciones
 
    Barra superior y Footer: Misma estructura de cabecera y pie de página.  
 
