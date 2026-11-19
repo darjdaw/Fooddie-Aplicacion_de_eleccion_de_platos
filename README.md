@@ -112,11 +112,9 @@ Que vistas tiene la app y que datos muestra cada una.
 
 ### Login
 
-   Encabezado / Bienvenida: Título "BIENVENIDO A FOODDIE" y un texto descriptivo de bienvenida.   
-   image_6d934a.png+ 1
+   Encabezado / Bienvenida: Título "BIENVENIDO A FOODDIE" y un texto descriptivo de bienvenida. 
 
-   Formulario de acceso: Campos de entrada para usuario y contraseña, mensaje de aviso de error ("Usuario o contraseña incorrectos") y botón "ACCEDER".   
-   image_6d934a.png+ 1
+   Formulario de acceso: Campos de entrada para usuario y contraseña, mensaje de aviso de error ("Usuario o contraseña incorrectos") y botón "ACCEDER".
 
    Opciones adicionales y registro: Tres bloques cuadrados de colores (rojo, azul y naranja), enlace "¿No tienes cuenta? Regístrate" y una insignia/sello decorativo rojo en el lateral derecho.
 
