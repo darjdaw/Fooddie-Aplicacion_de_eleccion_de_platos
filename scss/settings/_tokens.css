@@ -12,6 +12,7 @@
    /* Primario: rojo cadmio */
       --colour-primary-900: #5c1720;
       --colour-primary: #e63946;    /* Base */
+      --colour-primary-cadmium-red: var(--colour-primary);
       --colour-primary-350: #ee747e;
       --colour-primary-200: #f7b0b6;
 
@@ -55,7 +56,7 @@
       --space-16: var(--space-long-16);  /* 64px */
 
 /*
-   3. TIPOGRAFÍA (Familias, tamaños y alturas de línea en rem)
+   3. TIPOGRAFÍA
 */
 
       --font-display: 'Monoton', cursive, sans-serif;
@@ -93,14 +94,14 @@
    4. RADIOS Y ELEVACIÓN
 */
 
-   /* Radios (ajusta si tienes valores específicos en Figma) */
+   /* Radios */
       --radius-none: 0rem;
       --radius-sm: 0.25rem;              /* 4px */
       --radius-md: 0.5rem;               /* 8px */
       --radius-lg: 1rem;                 /* 16px */
       --radius-full: 9999px;
 
-   /* Elevación: Sombra paralela X: 8, Y: 8, Desenfoque: 0, Propagación: 0, #1D3557 100% */
+   /* Elevación: */
       --elevation-default: 0.5rem 0.5rem 0 0 var(--night-blue);
       --elevation-none: none;
 
@@ -125,7 +126,7 @@
       --space-group-gap: var(--space-8);         /* 32px */
       --space-section-gap: var(--space-16);      /* 64px */
 
-   /* Variables de tema (Light Mode / Dark Mode) */
+   /* Variables de tema (Light Mode/Dark Mode) */
       --nav-bar: light-dark(var(--cream-white), var(--colour-secondary-900));
       --background: light-dark(var(--pure-white), var(--pure-white));
       --frame: light-dark(var(--colour-secondary-200), var(--colour-secondary-900));
