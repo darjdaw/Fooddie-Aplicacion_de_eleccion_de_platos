@@ -86,6 +86,74 @@ El proyecto está construido sobre el stack **MERN** (**M**ongoDB, **E**xpress.j
 
 La lista de funcionalidades del proyecto, partida en piezas pequeñas y ordenada por prioridad.
 
+- El usuario puede crear y acceder a una cuenta.
+
+- El usuario puede crear una "sesión", entendiendo como sesión no el uso de la cuenta de usuario en si, sino de una orden de comida, ya sea a domicilio o en el establecimiento.
+
+- El usuario puede añadir comensales a la orden de comida.
+
+- Los comensales puede hacer uso de unas etiquetas para proponer un sitio o un tema de comida.
+
+- Se puede realizar un sorteo con las opciones propuestas.
+
+- El usuario puede añadir platos a esta orden. Los platos aparecerán identificados por etiquetas por los que serán filtrados y los usuarios irán etiquetando los platos a la vez de los añaden.
+
+- Los platos añadidos se adjudican a usuarios en concreto o se asignan a una cuenta en común.
+
+- El precio de los platos y la cantidad correspondiente que tenga que pagar cada uno de los comensales se actualiza automaticamente.
+
+- El usuario puede descubrir y navegar por ciertas colecciones de platos creadas por otros usuarios.
+
+- El usuario puede crear sus poprias colecciones a modo de lista de deseados o para hacer las ordenes mas rápidamente en un futuro.
+
 ### **Mapa de pantallas:**
 
 Que vistas tiene la app y que datos muestra cada una.
+
+- #### Login
+
+   Encabezado / Bienvenida: Título "BIENVENIDO A FOODDIE" y un texto descriptivo de bienvenida. 
+
+   Formulario de acceso: Campos de entrada para usuario y contraseña, mensaje de aviso de error ("Usuario o contraseña incorrectos") y botón "ACCEDER".
+
+   Opciones adicionales y registro: Tres bloques cuadrados de colores (rojo, azul y naranja), enlace "¿No tienes cuenta? Regístrate" y una insignia/sello decorativo rojo en el lateral derecho.
+
+- #### Menú principal
+
+   Barra superior (Header): Logo de Fooddie, barra de búsqueda redondeada, iconos de acción (compartir, historial, avisos, modo nocturno), saludo "Bienvenido/a, usuario", menú hamburguesa y foto de perfil.
+
+   Novedades: Sección "Descubre lo nuevo en comida (tag)" con cuatro tarjetas de contenido (imagen superior, título y texto descriptivo) y controles laterales para avanzar o retroceder.
+
+   Accesos directos principales: Tres tarjetas grandes con imagen y título en mayúsculas: "ORGANIZAR PEDIDO", "DECIDIR COMIDA" y "MIS COLECCIONES".
+
+   Comunidad: Sección "Colecciones destacadas de la comunidad" con cuatro tarjetas en cuadrícula.
+
+   Pie de página (Footer): Enlace "Política de cookies" y aviso de copyright "© 2026 Cádiz".
+
+- #### Organizar pedido
+
+   Barra superior y Footer: Mantienen la misma estructura de navegación y cierre que el menú principal.   
+
+   Columna de PLATOS (izquierda): Listado de platos añadidos al pedido con fotografía, título, detalles (tipo-*, sitio-*) y cantidad.   
+
+   Columna de COMENSALES (derecha): Resumen de GRUPO (PLATOS:, PRECIO TOTAL, PRECIO POR PERSONA), desglose por usuario (USER 1, USER 2, USER 3 con PLATOS:, PRECIO INDIVIDUAL y PRECIO + GRUPO), botón de eliminar (✕), botón + para añadir comensales y el código del grupo.
+
+   Acciones y sugerencias: Botón central + para añadir elementos y bloque inferior "Quizas te interese" con cuatro tarjetas.   
+
+- #### Decidir comida
+
+   Barra superior y Footer: Misma estructura general. 
+
+   Columna de ideas y sorteo (izquierda): Título "AÑADE IDEAS Y HACED SORTEO" con subtítulo explicativo ("Podéis seguir haciendo sorteos hasta que os pongáis de acuerdo en qué pedir") y tarjetas de ideas con imagen, título, descripción y contador.
+
+   Columna de COMENSALES (derecha): Lista de participantes, botón de eliminar, botón + para añadir y código del grupo. 
+
+   Acciones y sugerencias: Botón central + y sección "Quizas te interese" con cuatro tarjetas.   
+
+- #### Mis colecciones
+
+   Barra superior y Footer: Misma estructura de cabecera y pie de página.  
+
+   Sección MIS COLECCIONES: Título, subtítulo descriptivo y cuadrícula de tarjetas de colección ("Colección n") con etiquetas (etiqueta-1 a etiqueta-4), botón "ver mas" y una tarjeta con icono + para crear una nueva colección.  
+
+   Sección Colecciones de la comunidad: Encabezado con etiqueta de filtro activa ("etiqueta 1"), selector "añadir filtro:" con campo de búsqueda y una fila inferior de cuatro tarjetas de colecciones.  
