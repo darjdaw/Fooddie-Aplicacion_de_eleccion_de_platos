@@ -84,76 +84,69 @@ El proyecto está construido sobre el stack **MERN** (**M**ongoDB, **E**xpress.j
 
 ### Backlog:
 
-La lista de funcionalidades del proyecto, partida en piezas pequeñas y ordenada por prioridad.
-
-- El usuario puede crear y acceder a una cuenta.
-
-- El usuario puede crear una "sesión", entendiendo como sesión no el uso de la cuenta de usuario en si, sino de una orden de comida, ya sea a domicilio o en el establecimiento.
-
-- El usuario puede añadir comensales a la orden de comida.
-
-- Los comensales puede hacer uso de unas etiquetas para proponer un sitio o un tema de comida.
-
-- Se puede realizar un sorteo con las opciones propuestas.
-
-- El usuario puede añadir platos a esta orden. Los platos aparecerán identificados por etiquetas por los que serán filtrados y los usuarios irán etiquetando los platos a la vez de los añaden.
-
-- Los platos añadidos se adjudican a usuarios en concreto o se asignan a una cuenta en común.
-
-- El precio de los platos y la cantidad correspondiente que tenga que pagar cada uno de los comensales se actualiza automaticamente.
-
-- El usuario puede descubrir y navegar por ciertas colecciones de platos creadas por otros usuarios.
-
-- El usuario puede crear sus poprias colecciones a modo de lista de deseados o para hacer las ordenes mas rápidamente en un futuro.
+| Funcionalidad | Prioridad | Estado |
+| :--- | :---: | :---: |
+| Como comensal, quiero añadir platos a la orden asignándoles etiquetas para filtrarlos fácilmente. | Alta | Hecho |
+| Como comensal, quiero adjudicar los platos añadidos a un usuario concreto o a una cuenta en común. | Muy Alta | Pendiente |
+| Como comensal, quiero que el precio de los platos y el total a pagar por cada persona se actualice automáticamente. | Muy Alta | Pendiente |
+| Como usuario, quiero poder crear una "sesión" (orden de comida) indicando si es a domicilio o en establecimiento, para iniciar un pedido grupal. | Alta | Pendiente |
+| Como creador de la sesión, quiero poder añadir comensales a la orden de comida para organizar el pedido de forma colaborativa. | Alta | Pendiente |
+| Como usuario, quiero poder crear una cuenta e iniciar sesión para acceder a mis pedidos y guardar mi información. | Alta | Pendiente |
+| Como comensal, quiero poder usar etiquetas para proponer restaurantes o temáticas de comida dentro de la sesión. | Media | Pendiente |
+| Como comensal, quiero poder realizar un sorteo aleatorio entre las opciones propuestas para decidir dónde o qué pedir. | Media | Pendiente |
+| Como usuario, quiero poder crear mis propias colecciones de platos (listas de deseados o favoritos) para agilizar futuros pedidos. | Baja | Pendiente |
+| Como usuario, quiero poder explorar y navegar por colecciones de platos creadas por otros usuarios para descubrir nuevas opciones. | Baja | Pendiente |
 
 ### **Mapa de pantallas:**
 
 Que vistas tiene la app y que datos muestra cada una.
 
-- #### Login
-
-   Encabezado / Bienvenida: Título "BIENVENIDO A FOODDIE" y un texto descriptivo de bienvenida. 
-
-   Formulario de acceso: Campos de entrada para usuario y contraseña, mensaje de aviso de error ("Usuario o contraseña incorrectos") y botón "ACCEDER".
-
-   Opciones adicionales y registro: Tres bloques cuadrados de colores (rojo, azul y naranja), enlace "¿No tienes cuenta? Regístrate" y una insignia/sello decorativo rojo en el lateral derecho.
-
-- #### Menú principal
-
-   Barra superior (Header): Logo de Fooddie, barra de búsqueda redondeada, iconos de acción (compartir, historial, avisos, modo nocturno), saludo "Bienvenido/a, usuario", menú hamburguesa y foto de perfil.
-
-   Novedades: Sección "Descubre lo nuevo en comida (tag)" con cuatro tarjetas de contenido (imagen superior, título y texto descriptivo) y controles laterales para avanzar o retroceder.
-
-   Accesos directos principales: Tres tarjetas grandes con imagen y título en mayúsculas: "ORGANIZAR PEDIDO", "DECIDIR COMIDA" y "MIS COLECCIONES".
-
-   Comunidad: Sección "Colecciones destacadas de la comunidad" con cuatro tarjetas en cuadrícula.
-
-   Pie de página (Footer): Enlace "Política de cookies" y aviso de copyright "© 2026 Cádiz".
-
-- #### Organizar pedido
-
-   Barra superior y Footer: Mantienen la misma estructura de navegación y cierre que el menú principal.   
-
-   Columna de PLATOS (izquierda): Listado de platos añadidos al pedido con fotografía, título, detalles (tipo-*, sitio-*) y cantidad.   
-
-   Columna de COMENSALES (derecha): Resumen de GRUPO (PLATOS:, PRECIO TOTAL, PRECIO POR PERSONA), desglose por usuario (USER 1, USER 2, USER 3 con PLATOS:, PRECIO INDIVIDUAL y PRECIO + GRUPO), botón de eliminar (✕), botón + para añadir comensales y el código del grupo.
-
-   Acciones y sugerencias: Botón central + para añadir elementos y bloque inferior "Quizas te interese" con cuatro tarjetas.   
-
-- #### Decidir comida
-
-   Barra superior y Footer: Misma estructura general. 
-
-   Columna de ideas y sorteo (izquierda): Título "AÑADE IDEAS Y HACED SORTEO" con subtítulo explicativo ("Podéis seguir haciendo sorteos hasta que os pongáis de acuerdo en qué pedir") y tarjetas de ideas con imagen, título, descripción y contador.
-
-   Columna de COMENSALES (derecha): Lista de participantes, botón de eliminar, botón + para añadir y código del grupo. 
-
-   Acciones y sugerencias: Botón central + y sección "Quizas te interese" con cuatro tarjetas.   
-
-- #### Mis colecciones
-
-   Barra superior y Footer: Misma estructura de cabecera y pie de página.  
-
-   Sección MIS COLECCIONES: Título, subtítulo descriptivo y cuadrícula de tarjetas de colección ("Colección n") con etiquetas (etiqueta-1 a etiqueta-4), botón "ver mas" y una tarjeta con icono + para crear una nueva colección.  
-
-   Sección Colecciones de la comunidad: Encabezado con etiqueta de filtro activa ("etiqueta 1"), selector "añadir filtro:" con campo de búsqueda y una fila inferior de cuatro tarjetas de colecciones.  
+```text
+Fooddie
+├── 1. Acceso / Autenticación (Login)
+│   ├── Encabezado de bienvenida ("BIENVENIDO A FOODDIE" + texto descriptivo)
+│   ├── Formulario de acceso (usuario, contraseña, aviso de error, botón "ACCEDER")
+│   ├── Opciones adicionales (3 bloques de color rojo, azul y naranja, sello decorativo)
+│   └── Enlace a registro ("¿No tienes cuenta? Regístrate")
+│
+└── 2. Menú Principal (Hub)
+    ├── [Global] Barra Superior (Header)
+    │   ├── Logo de Fooddie
+    │   ├── Barra de búsqueda redondeada
+    │   ├── Acciones rápidas (compartir, historial, avisos, modo nocturno)
+    │   └── Perfil ("Bienvenido/a, usuario", menú hamburguesa, foto de perfil)
+    │
+    ├── Novedades ("Descubre lo nuevo en comida (tag)")
+    │   ├── Carrusel de 4 tarjetas (imagen, título, descripción)
+    │   └── Controles laterales (anterior / siguiente)
+    │
+    ├── Accesos Directos Principales
+    │   ├── 2.1. Organizar Pedido
+    │   │   ├── Columna izquierda — PLATOS (lista con foto, título, "tipo-*", "sitio-*", cantidad)
+    │   │   ├── Columna derecha — COMENSALES
+    │   │   │   ├── Resumen GRUPO (PLATOS:, PRECIO TOTAL, PRECIO POR PERSONA)
+    │   │   │   ├── Desglose por comensal (USER 1, USER 2, USER 3: PLATOS:, PRECIO INDIVIDUAL, PRECIO + GRUPO, botón ✕)
+    │   │   │   └── Gestión de grupo (botón + añadir comensal, código del grupo)
+    │   │   ├── Acción central (botón + añadir elementos)
+    │   │   └── Sugerencias ("Quizás te interese" — 4 tarjetas)
+    │   │
+    │   ├── 2.2. Decidir Comida
+    │   │   ├── Columna izquierda — Ideas y Sorteo ("AÑADE IDEAS Y HACED SORTEO" + subtítulo)
+    │   │   │   └── Tarjetas de ideas (imagen, título, descripción, contador)
+    │   │   ├── Columna derecha — COMENSALES (participantes, eliminar, + añadir, código del grupo)
+    │   │   ├── Acción central (botón +)
+    │   │   └── Sugerencias ("Quizás te interese" — 4 tarjetas)
+    │   │
+    │   └── 2.3. Mis Colecciones
+    │       ├── MIS COLECCIONES (título, subtítulo descriptivo)
+    │       │   ├── Cuadrícula "Colección n" (etiqueta-1 a etiqueta-4, botón "ver más")
+    │       │   └── Tarjeta crear colección (icono +)
+    │       └── Colecciones de la Comunidad
+    │           ├── Filtros (etiqueta activa "etiqueta 1", selector "añadir filtro:" + buscador)
+    │           └── Fila de 4 tarjetas de colecciones
+    │
+    ├── Comunidad ("Colecciones destacadas de la comunidad" — cuadrícula de 4 tarjetas)
+    │
+    └── [Global] Pie de Página (Footer)
+        ├── Enlace "Política de cookies"
+        └── Aviso de copyright ("© 2026 Cádiz")
