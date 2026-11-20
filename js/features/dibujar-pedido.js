@@ -1,4 +1,5 @@
 import { comandas, platos, Comanda } from '../datos.js';
+import { abrirFichaPlato } from './mostrar-mas.js';
 
 const btnAnadirPlato = document.getElementById('btn-anadir-plato');
 const selectorPlatos = document.getElementById('selector-platos');
@@ -34,6 +35,12 @@ function renderizarComandas() {
     btnMas.className = 'btn-mostrar-mas';
     btnMas.textContent = 'Mostrar más';
     btnMas.dataset.indice = indice;
+
+    btnMas.addEventListener('click', () => {
+      console.log("mostrar mas");
+      abrirFichaPlato(comanda);
+    });
+
 
     tarjeta.appendChild(titulo);
     tarjeta.appendChild(usuario);

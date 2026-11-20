@@ -153,7 +153,7 @@ export class Comanda {
    }
 }
 
-export const comandas = [];
+export const comandas = []
 //    // 1. Compartido del grupo: Gyozas a la Plancha (Ramen Ramon)
 //       new Comanda({
 //          id: "linea_001",
