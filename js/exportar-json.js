@@ -1,36 +1,30 @@
-import { platos, lineasPedido } from './datos.js';
+import { platos, comandas } from './datos.js';
 
-function descargarJSON(nombreArchivo, datos) {
+const btnExportarPlatos = document.getElementById('btn-exportar-platos');
+const btnExportarLineas = document.getElementById('btn-exportar-lineas');
+
+function descargarJSON(datos, nombreArchivo) {
   const contenido = JSON.stringify(datos, null, 2);
-  const blob = new Blob([contenido], { type: 'application/json' });
+  const blob = new Blob([contenido], { type: 'application/json;charset=utf-8' });
   const url = URL.createObjectURL(blob);
 
-  const link = document.createElement('a');
-  link.href = url;
-  link.download = nombreArchivo;
+  const enlace = document.createElement('a');
+  enlace.href = url;
+  enlace.download = nombreArchivo;
 
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-
-  setTimeout(() => URL.revokeObjectURL(url), 1000);
-
-  // Liberamos la URL temporal de memoria
-  URL.revokeObjectURL(url);
+  document.body.appendChild(enlace);
+  enlace.click();
+  document.body.removeChild(enlace);;
 }
 
-// Conectamos los botones si existen en la página
-const btnPlatos = document.getElementById('btn-exportar-platos');
-const btnLineas = document.getElementById('btn-exportar-lineas');
-
-if (btnPlatos) {
-  btnPlatos.addEventListener('click', () => {
-    descargarJSON('platos.json', platos);
+if (btnExportarPlatos) {
+  btnExportarPlatos.addEventListener('click', () => {
+    descargarJSON(platos, 'platos.json');
   });
 }
 
-if (btnLineas) {
-  btnLineas.addEventListener('click', () => {
-    descargarJSON('lineasPedido.json', lineasPedido);
+if (btnExportarLineas) {
+  btnExportarLineas.addEventListener('click', () => {
+    descargarJSON(comandas, 'comandas.json');
   });
 }
