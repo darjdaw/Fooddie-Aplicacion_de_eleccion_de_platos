@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-   <meta charset="UTF-8">
-   <title>Organizar Pedido - Fooddie</title>
-   <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Organizar Pedido - Fooddie</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -18,26 +18,40 @@
       <input type="text" class="search-bar" placeholder="Buscar...">
     </div>
 
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="decidir-comida.html" class="nav-link">Decidir comida</a>
+        </li>
+        <li class="nav-item">
+          <a href="organizar-pedido.html" class="nav-link">Organizar pedido</a>
+        </li>
+        <li class="nav-item">
+          <a href="mis-colecciones.html" class="nav-link">Mis colecciones</a>
+        </li>
+      </ul>
+    </nav>
+
     <div class="header-spacer"></div>
 
     <div class="action-icons">
-      <button class="icon-btn">
+      <button type="button" class="icon-btn">
         <img src="src/img/icon-share.svg" alt="Compartir" class="nav-icon">
       </button>
-      <button class="icon-btn">
+      <button type="button" class="icon-btn">
         <img src="src/img/icon-history.svg" alt="Historial" class="nav-icon">
       </button>
-      <button class="icon-btn">
+      <button type="button" class="icon-btn">
         <img src="src/img/icon-notifications.svg" alt="Avisos" class="nav-icon">
       </button>
-      <button class="icon-btn">
+      <button type="button" class="icon-btn">
         <img src="src/img/icon-darkmode.svg" alt="Modo nocturno" class="nav-icon">
       </button>
     </div>
 
     <div class="user-block">
       <span class="welcome-text">Bienvenido, usuario/a</span>
-      <button class="burger-btn">
+      <button type="button" class="burger-btn">
         <img src="src/img/burger.svg" alt="Menú" class="nav-icon">
       </button>
       <img src="src/img/profile-avatar.jpg" alt="Foto de perfil" class="profile-img">
@@ -45,32 +59,18 @@
   </div>
 </header>
 
-<main class="main-content"> 
-
+<main class="main-content">
   <div class="order-layout-grid">
-    
-    <section class="section-platos">
-      <h2 class="section-title-left">PLATOS</h2>
-      
-      <div class="platos-list">
-        <article class="plato-card">
-          <div class="plato-img-bg" style="background-image: url('src/img/plato-ejemplo.jpg');"></div>
-          <div class="plato-info">
-            <h3 class="plato-title">Lorem ipsum dolor sit<br>amet consectetur.</h3>
-            <span class="plato-details">tipo-*, sitio-*</span>
-          </div>
-          <span class="plato-quantity">x1</span>
-        </article>
+    <section class="section-order">
+      <h1 class="section-title">PLATOS</h1>
 
-        <article class="plato-card">
-          <div class="plato-img-bg" style="background-image: url('src/img/plato-ejemplo.jpg');"></div>
-          <div class="plato-info">
-            <h3 class="plato-title">Lorem ipsum dolor sit<br>amet consectetur.</h3>
-            <span class="plato-details">tipo-*, sitio-*</span>
-          </div>
-          <span class="plato-quantity">x1</span>
-        </article>
-      </div>
+      <button id="btn-anadir-plato" type="button" class="btn-anadir-plato" aria-label="Añadir plato">
+        <img src="src/img/btn-add.svg" alt="" class="icono-btn-add">
+      </button>
+
+      <div id="selector-platos" class="selector"></div>
+
+      <div id="listado-comandas" class="comanda-card-grid"></div>
     </section>
 
     <aside class="section-comensales">
@@ -91,7 +91,7 @@
             <p>PRECIO INDIVIDUAL</p>
             <p>PRECIO + GRUPO</p>
           </div>
-          <button class="remove-btn">✕</button>
+          <button type="button" class="remove-btn">✕</button>
         </div>
 
         <div class="user-row">
@@ -101,7 +101,7 @@
             <p>PRECIO INDIVIDUAL</p>
             <p>PRECIO + GRUPO</p>
           </div>
-          <button class="remove-btn">✕</button>
+          <button type="button" class="remove-btn">✕</button>
         </div>
 
         <div class="user-row">
@@ -111,11 +111,11 @@
             <p>PRECIO INDIVIDUAL</p>
             <p>PRECIO + GRUPO</p>
           </div>
-          <button class="remove-btn">✕</button>
+          <button type="button" class="remove-btn">✕</button>
         </div>
 
         <div class="add-user-container">
-          <button class="add-circle-btn">+</button>
+          <button type="button" class="add-circle-btn">+</button>
         </div>
 
         <div class="grupo-codigo">
@@ -123,53 +123,51 @@
         </div>
       </div>
     </aside>
-
   </div>
 
   <div class="center-add-action">
-    <button class="add-circle-large">+</button>
+    <button type="button" class="add-circle-large">+</button>
   </div>
 
   <section class="section-discovery">
     <h2 class="section-title">Quizás te interese</h2>
-      
-      <div class="carousel-container">
-        <div class="food-cards-grid">
-          <article class="food-card">
-            <div class="card-img-placeholder"></div>
-            <div class="card-content">
-              <h3 class="card-title">Lorem ipsum dolor sit</h3>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur. In dictum tincidunt velit semper. Dolor vitae sollicitudin velit mi diam sit suspendisse.</p>
-            </div>
-          </article>
 
-          <article class="food-card">
-            <div class="card-img-placeholder"></div>
-            <div class="card-content">
-              <h3 class="card-title">Lorem ipsum dolor sit</h3>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur. In dictum tincidunt velit semper. Dolor vitae sollicitudin velit mi diam sit suspendisse.</p>
-            </div>
-          </article>
+    <div class="carousel-container">
+      <div class="food-cards-grid">
+        <article class="food-card">
+          <div class="card-img-placeholder"></div>
+          <div class="card-content">
+            <h3 class="card-title">Lorem ipsum dolor sit</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur. In dictum tincidunt velit semper. Dolor vitae sollicitudin velit mi diam sit suspendisse.</p>
+          </div>
+        </article>
 
-          <article class="food-card">
-            <div class="card-img-placeholder"></div>
-            <div class="card-content">
-              <h3 class="card-title">Lorem ipsum dolor sit</h3>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur. In dictum tincidunt velit semper. Dolor vitae sollicitudin velit mi diam sit suspendisse.</p>
-            </div>
-          </article>
+        <article class="food-card">
+          <div class="card-img-placeholder"></div>
+          <div class="card-content">
+            <h3 class="card-title">Lorem ipsum dolor sit</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur. In dictum tincidunt velit semper. Dolor vitae sollicitudin velit mi diam sit suspendisse.</p>
+          </div>
+        </article>
 
-          <article class="food-card">
-            <div class="card-img-placeholder"></div>
-            <div class="card-content">
-              <h3 class="card-title">Lorem ipsum dolor sit</h3>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur. In dictum tincidunt velit semper. Dolor vitae sollicitudin velit mi diam sit suspendisse.</p>
-            </div>
-          </article>
-        </div>
+        <article class="food-card">
+          <div class="card-img-placeholder"></div>
+          <div class="card-content">
+            <h3 class="card-title">Lorem ipsum dolor sit</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur. In dictum tincidunt velit semper. Dolor vitae sollicitudin velit mi diam sit suspendisse.</p>
+          </div>
+        </article>
+
+        <article class="food-card">
+          <div class="card-img-placeholder"></div>
+          <div class="card-content">
+            <h3 class="card-title">Lorem ipsum dolor sit</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet consectetur. In dictum tincidunt velit semper. Dolor vitae sollicitudin velit mi diam sit suspendisse.</p>
+          </div>
+        </article>
       </div>
+    </div>
   </section>
-
 </main>
 
 <footer class="footer">
@@ -179,5 +177,7 @@
   </div>
 </footer>
 
+<script type="module" src="./js/features/dibujar-pedido.js"></script>
+<script type="module" src="./js/features/mostrar-mas.js"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@ export const platos = [
       nombre: "Ramen Tonkotsu Especial",
       descripcion: "Caldo de cerdo cocinado a fuego lento con fideos artesanales, huevo marinado y chashu.",
       imagenUrl: "src/img/plato-ejemplo.jpg",
-      precio: 13.50,
+      precio: 13.50, 
       tipo: "Japonesa",
       sitio: "Ramen Ramon",
       etiquetas: ["ramen", "noodles", "caliente", "novedad"]
@@ -139,11 +139,11 @@ export const platos = [
 // A: 
 // No conviene usar herencia (extends Plato) en este caso, sino composición (crear una clase separada que contenga una referencia al Plato).
 // Si heredaras de Plato, estarías duplicando todos los datos del producto (nombre, foto, descripción, restaurante) cada vez que un usuario distinto lo pida o cambie la cantidad. 
-// En cambio, al separar el catálogo (Plato) de la línea del pedido (LineaPedido), mantienes los datos limpios y evitas inconsistencias si el precio o el nombre del plato cambian.
+// En cambio, al separar el catálogo (Plato) de la línea del pedido (Comanda), mantienes los datos limpios y evitas inconsistencias si el precio o el nombre del plato cambian.
 
-// Entidad Linea pedido como instancia de plato, como aparecería representada al añadir un plato a un pedido, pudiendo ser añadido mas de una vez y asignándole comensales.
+// Entidad Comanda como instancia de plato, como aparecería representada al añadir un plato a un pedido, pudiendo ser añadido mas de una vez y asignándole comensales.
 
-class LineaPedido {
+export class Comanda {
    constructor({ id, plato, cantidad = 1, usuarioId = null, esCompartido = false }) {
       this.id = id;
       this.plato = plato;               // Instancia de Plato
@@ -153,97 +153,97 @@ class LineaPedido {
    }
 }
 
-export const lineasPedido = [
-   // 1. Compartido del grupo: Gyozas a la Plancha (Ramen Ramon)
-      new LineaPedido({
-         id: "linea_001",
-         plato: platos[1],
-         cantidad: 2,
-         usuarioId: null,
-         esCompartido: true
-      }),
+export const comandas = []
+//    // 1. Compartido del grupo: Gyozas a la Plancha (Ramen Ramon)
+//       new Comanda({
+//          id: "linea_001",
+//          plato: platos[1],
+//          cantidad: 1,
+//          usuarioId: null,
+//          esCompartido: false
+//       }),
 
-   // 2. Compartido del grupo: Pizza Trufa y Champiñones (La Trattoria)
-      new LineaPedido({
-         id: "linea_002",
-         plato: platos[2],
-         cantidad: 1,
-         usuarioId: null,
-         esCompartido: true
-      }),
+//    // 2. Compartido del grupo: Pizza Trufa y Champiñones (La Trattoria)
+//       new Comanda({
+//          id: "linea_002",
+//          plato: platos[2],
+//          cantidad: 1,
+//          usuarioId: null,
+//          esCompartido: false
+//       }),
 
-   // 3. Compartido del grupo: Nachos con Guacamole Casero (Cantina Norte)
-      new LineaPedido({
-         id: "linea_003",
-         plato: platos[7],
-         cantidad: 1,
-         usuarioId: null,
-         esCompartido: true
-      }),
+//    // 3. Compartido del grupo: Nachos con Guacamole Casero (Cantina Norte)
+//       new Comanda({
+//          id: "linea_003",
+//          plato: platos[7],
+//          cantidad: 1,
+//          usuarioId: null,
+//          esCompartido: false
+//       }),
 
-   // 4. Individual USER 1: Ramen Tonkotsu Especial (Ramen Ramon)
-      new LineaPedido({
-         id: "linea_004",
-         plato: platos[0],
-         cantidad: 1,
-         usuarioId: "user_1",
-         esCompartido: false
-      }),
+//    // 4. Individual USER 1: Ramen Tonkotsu Especial (Ramen Ramon)
+//       new Comanda({
+//          id: "linea_004",
+//          plato: platos[0],
+//          cantidad: 1,
+//          usuarioId: null,
+//          esCompartido: false
+//       }),
 
-   // 5. Individual USER 1: Mochi de Chocolate y Avellana (Aloha Bowl)
-      new LineaPedido({
-         id: "linea_005",
-         plato: platos[9],
-         cantidad: 2,
-         usuarioId: "user_1",
-         esCompartido: false
-      }),
+//    // 5. Individual USER 1: Mochi de Chocolate y Avellana (Aloha Bowl)
+//       new Comanda({
+//          id: "linea_005",
+//          plato: platos[9],
+//          cantidad: 1,
+//          usuarioId: null,
+//          esCompartido: false
+//       }),
 
-   // 6. Individual USER 2: Smash Burger Doble Bacon (Burger Queen)
-      new LineaPedido({
-         id: "linea_006",
-         plato: platos[4],
-         cantidad: 1,
-         usuarioId: "user_2",
-         esCompartido: false
-      }),
+//    // 6. Individual USER 2: Smash Burger Doble Bacon (Burger Queen)
+//       new Comanda({
+//          id: "linea_006",
+//          plato: platos[4],
+//          cantidad: 1,
+//          usuarioId: null,
+//          esCompartido: false
+//       }),
 
-   // 7. Individual USER 2: Patatas Gajo con Queso y Jalapeños (Burger Queen)
-      new LineaPedido({
-         id: "linea_007",
-         plato: platos[5],
-         cantidad: 1,
-         usuarioId: "user_2",
-         esCompartido: false
-      }),
+//    // 7. Individual USER 2: Patatas Gajo con Queso y Jalapeños (Burger Queen)
+//       new Comanda({
+//          id: "linea_007",
+//          plato: platos[5],
+//          cantidad: 1,
+//          usuarioId: null,
+//          esCompartido: false
+//       }),
 
-   // 8. Individual USER 3: Tacos al Pastor (Cantina Norte)
-      new LineaPedido({
-         id: "linea_008",
-         plato: platos[6],
-         cantidad: 2,
-         usuarioId: "user_3",
-         esCompartido: false
-      }),
+//    // 8. Individual USER 3: Tacos al Pastor (Cantina Norte)
+//       new Comanda({
+//          id: "linea_008",
+//          plato: platos[6],
+//          cantidad: 1,
+//          usuarioId: null,
+//          esCompartido: false
+//       }),
 
-   // 9. Individual USER 3: Poke Bowl de Salmón y Mango (Aloha Bowl)
-      new LineaPedido({
-         id: "linea_009",
-         plato: platos[8],
-         cantidad: 1,
-         usuarioId: "user_3",
-         esCompartido: false
-      }),
+//    // 9. Individual USER 3: Poke Bowl de Salmón y Mango (Aloha Bowl)
+//       new Comanda({
+//          id: "linea_009",
+//          plato: platos[8],
+//          cantidad: 1,
+//          usuarioId: "null",
+//          esCompartido: false
+//       }),
 
-   // 10. Individual USER 3: Burrata con Tomate Seco (La Trattoria)
-   new LineaPedido({
-      id: "linea_010",
-      plato: platos[3],
-      cantidad: 1,
-      usuarioId: "user_3",
-      esCompartido: false
-   })
-];
+//    // 10. Individual USER 3: Burrata con Tomate Seco (La Trattoria)
+//    new Comanda({
+//       id: "linea_010",
+//       plato: platos[3],
+//       cantidad: 1,
+//       usuarioId: null,
+//       esCompartido: false
+//    })
+// ];
 
 // Para CHANGELOG.md
 // -----------------
@@ -273,4 +273,3 @@ export const lineasPedido = [
 //    pero sigue conservando el nombre de propiedad _id.
 
 // Voy a poner los registros con la id normal. Aun con esta explicación no entiendo como sería la conectividad con Mongo y lo dejaré para mas adelante.
-
