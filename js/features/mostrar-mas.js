@@ -13,6 +13,17 @@ export function abrirFichaPlato(comanda) {
    const ficha = document.createElement('article');
    ficha.className = 'ficha-plato';
 
+      const btnCerrar = document.createElement('button');
+   btnCerrar.type = 'button';
+   btnCerrar.className = 'ficha-cerrar';
+   btnCerrar.textContent = '×';
+   btnCerrar.setAttribute('cerrar-ficha', 'Cerrar ficha del plato');
+   btnCerrar.addEventListener('click', () => {
+      overlay.remove();
+   });
+
+   ficha.appendChild(btnCerrar);
+
    if (plato.imagenUrl) {
       const img = document.createElement('img');
       img.className = 'ficha-imagen';
