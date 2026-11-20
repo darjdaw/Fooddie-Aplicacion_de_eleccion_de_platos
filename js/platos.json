@@ -1,0 +1,150 @@
+[
+  {
+    "id": "plato_001",
+    "nombre": "Ramen Tonkotsu Especial",
+    "descripcion": "Caldo de cerdo cocinado a fuego lento con fideos artesanales, huevo marinado y chashu.",
+    "imagenUrl": "src/img/plato-ejemplo.jpg",
+    "precio": 13.5,
+    "tipo": "Japonesa",
+    "sitio": "Ramen Ramon",
+    "etiquetas": [
+      "ramen",
+      "noodles",
+      "caliente",
+      "novedad"
+    ]
+  },
+  {
+    "id": "plato_002",
+    "nombre": "Gyozas a la Plancha (6 uds)",
+    "descripcion": "Empanadillas japonesas rellenas de cerdo y verduras con salsa de soja y jengibre.",
+    "imagenUrl": "src/img/gyozas.jpg",
+    "precio": 6.52331232321,
+    "tipo": "Entrante",
+    "sitio": "Ramen Ramon",
+    "etiquetas": [
+      "entrante",
+      "compartir",
+      "japonesa"
+    ]
+  },
+  {
+    "id": "plato_003",
+    "nombre": "Pizza Trufa y Champiñones",
+    "descripcion": "Masa fermentada 48h con base de mozzarella fior di latte, crema de trufa y portobello.",
+    "imagenUrl": "src/img/pizza-trufa.jpg",
+    "precio": 14,
+    "tipo": "Italiana",
+    "sitio": "La Trattoria",
+    "etiquetas": [
+      "pizza",
+      "trufa",
+      "vegetariana",
+      "compartir"
+    ]
+  },
+  {
+    "id": "plato_004",
+    "nombre": "Burrata con Tomate Seco",
+    "descripcion": "Queso burrata fresco acompañado de tomates cherry confitados, albahaca y aceite de oliva.",
+    "imagenUrl": "src/img/burrata.jpg",
+    "precio": 9.5,
+    "tipo": "Entrante",
+    "sitio": "La Trattoria",
+    "etiquetas": [
+      "entrante",
+      "queso",
+      "vegetariana",
+      "compartir"
+    ]
+  },
+  {
+    "id": "plato_005",
+    "nombre": "Smash Burger Doble Bacon",
+    "descripcion": "Doble carne de vaca madurada a la plancha, cheddar fundido, bacon crujiente y salsa house.",
+    "imagenUrl": "src/img/smash-burger.jpg",
+    "precio": 12.8,
+    "tipo": "Americana",
+    "sitio": "Burger Queen",
+    "etiquetas": [
+      "hamburguesa",
+      "bacon",
+      "rapida",
+      "novedad"
+    ]
+  },
+  {
+    "id": "plato_006",
+    "nombre": "Patatas Gajo con Queso y Jalapeños",
+    "descripcion": "Patatas rústicas crujientes cubiertas de salsa de queso cheddar, jalapeños y cebollino.",
+    "imagenUrl": "src/img/patatas-queso.jpg",
+    "precio": 5.9,
+    "tipo": "Acompañamiento",
+    "sitio": "Burger Queen",
+    "etiquetas": [
+      "patatas",
+      "picante",
+      "compartir",
+      "entrante"
+    ]
+  },
+  {
+    "id": "plato_007",
+    "nombre": "Tacos al Pastor (3 uds)",
+    "descripcion": "Tortillas de maíz con cerdo adobado en axiote, piña asada, cilantro y cebolla.",
+    "imagenUrl": "src/img/tacos-pastor.jpg",
+    "precio": 10.5,
+    "tipo": "Mexicana",
+    "sitio": "Cantina Norte",
+    "etiquetas": [
+      "tacos",
+      "mexicana",
+      "pina"
+    ]
+  },
+  {
+    "id": "plato_008",
+    "nombre": "Nachos con Guacamole Casero",
+    "descripcion": "Totopos de maíz con guacamole recién preparado, pico de gallo, crema agria y queso.",
+    "imagenUrl": "src/img/nachos.jpg",
+    "precio": 8.2,
+    "tipo": "Entrante",
+    "sitio": "Cantina Norte",
+    "etiquetas": [
+      "nachos",
+      "guacamole",
+      "compartir",
+      "vegetariana"
+    ]
+  },
+  {
+    "id": "plato_009",
+    "nombre": "Poke Bowl de Salmón y Mango",
+    "descripcion": "Base de arroz de sushi con salmón marinado, aguacate, mango, edamame y sésamo.",
+    "imagenUrl": "src/img/poke-salmon.jpg",
+    "precio": 12.9,
+    "tipo": "Hawaiana",
+    "sitio": "Aloha Bowl",
+    "etiquetas": [
+      "poke",
+      "saludable",
+      "salmon",
+      "fresco"
+    ]
+  },
+  {
+    "id": "plato_010",
+    "nombre": "Mochi de Chocolate y Avellana",
+    "descripcion": "Pastelito de arroz glutinoso relleno de crema suave de cacao y avellana tostada.",
+    "imagenUrl": "src/img/mochi.jpg",
+    "precio": 4.8,
+    "tipo": "Postre",
+    "sitio": "Aloha Bowl",
+    "etiquetas": [
+      "postre",
+      "dulce",
+      "chocolate",
+      "novedad"
+    ]
+  }
+]
