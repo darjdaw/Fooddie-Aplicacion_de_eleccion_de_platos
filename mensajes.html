@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Mensajes enviados - Fooddie</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-container">
+    <a href="index.html" class="logo-link">
+      <img src="src/img/fooddie.svg" alt="fooddie" class="logo-img">
+    </a>
+
+    <div class="search-container">
+      <input type="text" class="search-bar" placeholder="Buscar...">
+    </div>
+
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="decidir-comida.html" class="nav-link">Decidir comida</a>
+        </li>
+        <li class="nav-item">
+          <a href="organizar-pedido.html" class="nav-link">Organizar pedido</a>
+        </li>
+        <li class="nav-item">
+          <a href="mis-colecciones.html" class="nav-link">Mis colecciones</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-spacer"></div>
+
+    <div class="action-icons">
+      <button type="button" class="icon-btn">
+        <img src="src/img/icon-share.svg" alt="Compartir" class="nav-icon">
+      </button>
+      <button type="button" class="icon-btn">
+        <img src="src/img/icon-history.svg" alt="Historial" class="nav-icon">
+      </button>
+      <button type="button" class="icon-btn">
+        <img src="src/img/icon-notifications.svg" alt="Avisos" class="nav-icon">
+      </button>
+      <button type="button" class="icon-btn">
+        <img src="src/img/icon-darkmode.svg" alt="Modo nocturno" class="nav-icon">
+      </button>
+    </div>
+
+    <div class="user-block">
+      <span class="welcome-text">Bienvenido, usuario/a</span>
+      <button type="button" class="burger-btn">
+        <img src="src/img/burger.svg" alt="Menú" class="nav-icon">
+      </button>
+      <img src="src/img/profile-avatar.jpg" alt="Foto de perfil" class="profile-img">
+    </div>
+  </div>
+</header>
+
+<main class="main-content">
+   <h1>Mensajes enviados</h1>
+   <p><a href="contacto.html">Enviar un mensaje nuevo</a></p>
+
+   <ul id="lista-mensajes"></ul>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    <p class="cookie-policy">Política de cookies</p>
+    <p class="copyright">© 2026 Cádiz</p>
+  </div>
+</footer>
+
+<script type="module" src="js/mensajes.js"></script>
+
+</body>
+</html>
