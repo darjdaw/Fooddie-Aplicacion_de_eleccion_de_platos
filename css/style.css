@@ -170,3 +170,15 @@ p {
 
   color: #ffffff; 
 }
+
+.error-mensaje {
+  display: block;
+  color: #b00020;
+  font-size: 0.875rem;
+}
+
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border: 2px solid #b00020;
+}
