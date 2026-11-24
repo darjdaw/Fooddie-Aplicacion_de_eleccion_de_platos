@@ -1,3 +1,5 @@
+const PREFIJO = "fooddie_";
+
 function leer(coleccion) {
    const texto = localStorage.getItem(PREFIJO + coleccion);
 
