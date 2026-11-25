@@ -71,6 +71,22 @@
                   <span id="error-fecha-nacimiento" class="error-mensaje" aria-live="polite"></span>
                </div>
 
+               <div class="registro-campo registro-campo-wide">
+                  <div class="registro-checkbox-row">
+                     <input type="checkbox" id="tiene-alergias" name="tiene-alergias">
+                     <label for="tiene-alergias">Tengo alergias o intolerancias</label>
+                  </div>
+               </div>
+
+               <div class="registro-campo registro-campo-wide" id="campo-alergias" hidden>
+                  <label for="alergias">¿Qué alergias tienes?</label>
+                  <div class="registro-input-wrap">
+                     <input class="registro-input" type="text" id="alergias" name="alergias"
+                           maxlength="100" aria-describedby="error-alergias">
+                  </div>
+                  <span id="error-alergias" class="error-mensaje" aria-live="polite"></span>
+               </div>
+
                <div class="registro-campo registro-campo-wide registro-conditions">
                   <div class="registro-checkbox-row">
                      <input type="checkbox" id="condiciones" name="condiciones" required
@@ -91,7 +107,6 @@
                <span class="color-block color-orange"></span>
             </div>
          </div>
-         </div>
       </section>
    </main>
 
@@ -103,7 +118,6 @@
   </footer>
 
   <script type="module" src="js/registro.js"></script>
-  <script src="js/menu.js" defer></script>
-  
+
 </body>
 </html>

@@ -91,11 +91,14 @@ El proyecto está construido sobre el stack **MERN** (**M**ongoDB, **E**xpress.j
 | Como comensal, quiero que el precio de los platos y el total a pagar por cada persona se actualice automáticamente. | Muy Alta | Pendiente |
 | Como usuario, quiero poder crear una "sesión" (orden de comida) indicando si es a domicilio o en establecimiento, para iniciar un pedido grupal. | Alta | Pendiente |
 | Como creador de la sesión, quiero poder añadir comensales a la orden de comida para organizar el pedido de forma colaborativa. | Alta | Pendiente |
+| Como usuario, quiero consultar, editar y borrar usuarios registrados. | Alta | En desarrollo |
+| Como usuario, quiero enviar consultas, sugerencias o incidencias mediante un formulario de contacto. | Alta | Hecho |
 | Como usuario, quiero poder crear una cuenta e iniciar sesión para acceder a mis pedidos y guardar mi información. | Alta | Pendiente |
 | Como comensal, quiero poder usar etiquetas para proponer restaurantes o temáticas de comida dentro de la sesión. | Media | Pendiente |
 | Como comensal, quiero poder realizar un sorteo aleatorio entre las opciones propuestas para decidir dónde o qué pedir. | Media | Pendiente |
 | Como usuario, quiero poder crear mis propias colecciones de platos (listas de deseados o favoritos) para agilizar futuros pedidos. | Baja | Pendiente |
 | Como usuario, quiero poder explorar y navegar por colecciones de platos creadas por otros usuarios para descubrir nuevas opciones. | Baja | Pendiente |
+| Como usuario, poder indicar mis alergias y que queden reflejadas en mi perfil para evitar problemas al hacer pedidos | Baja | Hecho |
 
 ### **Mapa de pantallas:**
 

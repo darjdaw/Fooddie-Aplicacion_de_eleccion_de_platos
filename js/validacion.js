@@ -137,3 +137,15 @@ export function validarMensaje(mensaje, minimo, maximo) {
 
    return null;
 }
+
+export function validarAlergias(alergias, tieneAlergias) {
+   if (!tieneAlergias) {
+      return null;
+   }
+
+   if (alergias.trim() === "") {
+      return "Necesitas indicar qué alergias tienes";
+   }
+
+   return null;
+}

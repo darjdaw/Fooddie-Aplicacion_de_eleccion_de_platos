@@ -6,13 +6,12 @@ function mostrarUsuarios() {
    lista.textContent = "";
 
    const usuarios = obtenerTodos("usuarios");
-
+   
    if (usuarios.length === 0) {
-      const botonEditar = document.createElement("button");
-      botonEditar.type = "button";
-      botonEditar.textContent = "Editar";
-      botonEditar.dataset.accion = "editar";
-      botonEditar.dataset.id = usuario.id;
+      const vacio = document.createElement("li");
+      vacio.textContent = "Todavía no hay usuarios registrados.";
+      lista.appendChild(vacio);
+      return;
    }
 
    usuarios.forEach((usuario) => {

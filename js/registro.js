@@ -4,7 +4,8 @@ import {
    validarPassword,
    validarRepetirPassword,
    validarFechaNacimiento,
-   validarCondiciones
+   validarCondiciones,
+   validarAlergias
 } from "./validacion.js";
 import { mostrarError, activarValidacion, validarTodos, limpiarFormulario } from "./formularios.js";
 import { crear, actualizar, obtenerPorId } from "./almacen.js";
@@ -19,6 +20,9 @@ const repetirPassword = document.getElementById("repetir-password");
 const fechaNacimiento = document.getElementById("fecha-nacimiento");
 const condiciones = document.getElementById("condiciones");
 const estado = document.getElementById("estado-formulario");
+const tieneAlergias = document.getElementById("tiene-alergias");
+const campoAlergias = document.getElementById("campo-alergias");
+const alergias = document.getElementById("alergias");
 
 const hoy = new Date();
 const mes = String(hoy.getMonth() + 1).padStart(2, "0");
@@ -36,6 +40,9 @@ if (idEditar !== null) {
       email.value = usuarioGuardado.email;
       fechaNacimiento.value = usuarioGuardado.fechaNacimiento;
       condiciones.checked = usuarioGuardado.condiciones;
+      tieneAlergias.checked = usuarioGuardado.tieneAlergias === true;
+      alergias.value = usuarioGuardado.alergias || "";
+      actualizarCampoAlergias();
 
       titulo.textContent = "Editar usuario";
       botonGuardar.textContent = "Guardar cambios";
@@ -46,7 +53,9 @@ const campos = [
    { campo: usuario, validar: () => validarNomUsuario(usuario.value) },
    { campo: email, validar: () => validarEmail(email.value) },
    { campo: fechaNacimiento, validar: () => validarFechaNacimiento(fechaNacimiento.value) },
+   { campo: alergias, validar: () => validarAlergias(alergias.value, tieneAlergias.checked) },
    { campo: condiciones, validar: () => validarCondiciones(condiciones.checked) }
+   
 ];
 
 // No se pide la contraseña porque no se guarda
@@ -83,7 +92,9 @@ formulario.addEventListener("submit", (evento) => {
       usuario: usuario.value,
       email: email.value,
       fechaNacimiento: fechaNacimiento.value,
-      condiciones: condiciones.checked
+      condiciones: condiciones.checked,
+      tieneAlergias: tieneAlergias.checked,
+      alergias: alergias.value
    };
 
    if (idEditar !== null) {
@@ -92,9 +103,25 @@ formulario.addEventListener("submit", (evento) => {
    } else {
       crear("usuarios", datos);
       limpiarFormulario(formulario, campos);
+      actualizarCampoAlergias();
       estado.textContent = "Usuario registrado correctamente.";
    }
 });
+
+function actualizarCampoAlergias() {
+   const marcado = tieneAlergias.checked;
+
+   campoAlergias.hidden = !marcado;
+   alergias.required = marcado;
+
+   if (!marcado) {
+      alergias.value = "";
+      mostrarError(alergias, null);
+   }
+
+}
+
+tieneAlergias.addEventListener("change", actualizarCampoAlergias);
 
 formulario.addEventListener("input", () => {
    estado.textContent = "";
