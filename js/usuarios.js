@@ -8,10 +8,11 @@ function mostrarUsuarios() {
    const usuarios = obtenerTodos("usuarios");
 
    if (usuarios.length === 0) {
-      const vacio = document.createElement("li");
-      vacio.textContent = "Todavía no hay usuarios registrados.";
-      lista.appendChild(vacio);
-      return;
+      const botonEditar = document.createElement("button");
+      botonEditar.type = "button";
+      botonEditar.textContent = "Editar";
+      botonEditar.dataset.accion = "editar";
+      botonEditar.dataset.id = usuario.id;
    }
 
    usuarios.forEach((usuario) => {
@@ -20,9 +21,11 @@ function mostrarUsuarios() {
       const datos = document.createElement("span");
       datos.textContent = usuario.usuario + " · " + usuario.email + " · " + usuario.fechaNacimiento;
 
-      const botonEditar = document.createElement("a");
-      botonEditar.href = "registro.html?id=" + usuario.id;
+      const botonEditar = document.createElement("button");
+      botonEditar.type = "button";
       botonEditar.textContent = "Editar";
+      botonEditar.dataset.accion = "editar";
+      botonEditar.dataset.id = usuario.id;
 
       const botonBorrar = document.createElement("button");
       botonBorrar.type = "button";
@@ -40,7 +43,7 @@ function mostrarUsuarios() {
 lista.addEventListener("click", (evento) => {
    const boton = evento.target.closest("button");
    
-   if (boton === null || boton.dataset.accion !== "borrar") {
+      if (boton === null || !lista.contains(boton)) {
       return;
    }
 
@@ -50,7 +53,7 @@ lista.addEventListener("click", (evento) => {
    if (accion === "editar") {
       window.location.href = "registro.html?id=" + id;
    } 
-   if (accion === "borrar") {
+   else if (accion === "borrar") {
       const confirmado = confirm("¿Estás seguro de que quieres borrar este usuario?");
 
       if (confirmado) {
