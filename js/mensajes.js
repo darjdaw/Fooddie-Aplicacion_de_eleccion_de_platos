@@ -43,4 +43,19 @@ function mostrarMensajes() {
    });
 }
 
+lista.addEventListener("click", (evento) => {
+   const boton = evento.target.closest("button");
+
+   if (boton === null || boton.dataset.accion !== "borrar") {
+      return;
+   }
+
+   const confirmado = confirm("¿Estás seguro de que quieres borrar este mensaje?");
+
+   if (confirmado) {
+      borrar("mensajes", boton.dataset.id);
+      mostrarMensajes();
+   }
+});
+
 mostrarMensajes();

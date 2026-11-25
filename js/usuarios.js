@@ -37,4 +37,27 @@ function mostrarUsuarios() {
    });
 }
 
+lista.addEventListener("click", (evento) => {
+   const boton = evento.target.closest("button");
+   
+   if (boton === null || boton.dataset.accion !== "borrar") {
+      return;
+   }
+
+   const id = boton.dataset.id;
+   const accion = boton.dataset.accion;
+   
+   if (accion === "editar") {
+      window.location.href = "registro.html?id=" + id;
+   } 
+   if (accion === "borrar") {
+      const confirmado = confirm("¿Estás seguro de que quieres borrar este usuario?");
+
+      if (confirmado) {
+         borrar("usuarios", id);
+         mostrarUsuarios();
+      }
+   }
+});
+
 mostrarUsuarios();

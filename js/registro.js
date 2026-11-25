@@ -18,6 +18,7 @@ const password = document.getElementById("password");
 const repetirPassword = document.getElementById("repetir-password");
 const fechaNacimiento = document.getElementById("fecha-nacimiento");
 const condiciones = document.getElementById("condiciones");
+const estado = document.getElementById("estado-formulario");
 
 const hoy = new Date();
 const mes = String(hoy.getMonth() + 1).padStart(2, "0");
@@ -90,5 +91,11 @@ formulario.addEventListener("submit", (evento) => {
       window.location.href = "usuarios.html";
    } else {
       crear("usuarios", datos);
+      limpiarFormulario(formulario, campos);
+      estado.textContent = "Usuario registrado correctamente.";
    }
+});
+
+formulario.addEventListener("input", () => {
+   estado.textContent = "";
 });
