@@ -153,6 +153,7 @@ Fooddie
     └── [Global] Pie de Página (Footer)
         ├── Enlace "Política de cookies"
         └── Aviso de copyright ("© 2026 Cádiz")
+```
 
 ## Hito 2 - formularios, validación y guardado
 
