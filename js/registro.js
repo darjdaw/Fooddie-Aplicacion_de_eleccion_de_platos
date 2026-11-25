@@ -6,7 +6,7 @@ import {
    validarFechaNacimiento,
    validarCondiciones
 } from "./validacion.js";
-import { mostrarError, activarValidacion, validarTodos } from "./formularios.js";
+import { mostrarError, activarValidacion, validarTodos, limpiarFormulario } from "./formularios.js";
 import { crear, actualizar, obtenerPorId } from "./almacen.js";
 
 const formulario = document.getElementById("form-registro");

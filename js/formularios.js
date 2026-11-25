@@ -40,3 +40,12 @@ export function validarTodos(lista) {
 
    return primerError;
 }
+
+export function limpiarFormulario(formulario, lista) {
+   formulario.reset();
+
+   for (let i = 0; i < lista.length; i++) {
+      lista[i].campo.dataset.tocado = "false";
+      mostrarError(lista[i].campo, null);
+   }
+}

@@ -4,12 +4,17 @@ import {
    validarMotivo,
    validarMensaje
 } from "./validacion.js";
-import { activarValidacion, validarTodos } from "./formularios.js";
+import { activarValidacion, validarTodos, limpiarFormulario } from "./formularios.js";
 import { crear } from "./almacen.js";
 import { escribirCookie, leerCookie } from "./cookies.js";
 
+const formulario = document.getElementById("form-contacto");
+const nombre = document.getElementById("nombre");
+const email = document.getElementById("email");
+const motivo = document.getElementById("motivo");
 const mensaje = document.getElementById("mensaje");
 const contador = document.getElementById("contador-mensaje");
+const estado = document.getElementById("estado-formulario");
 
 const minimo = mensaje.minLength;
 const maximo = mensaje.maxLength;
@@ -74,4 +79,13 @@ formulario.addEventListener("submit", (evento) => {
 // Recordamos nombre y correo durante 30 días.
    escribirCookie("contacto_nombre", nombre.value, 30);
    escribirCookie("contacto_email", email.value, 30);
+
+   limpiarFormulario(formulario, campos);
+   actualizarContador();
+   estado.textContent = "Mensaje enviado correctamente.";
+});
+
+
+formulario.addEventListener("input", () => {
+   estado.textContent = "";
 });
