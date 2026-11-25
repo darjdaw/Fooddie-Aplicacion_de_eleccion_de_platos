@@ -206,12 +206,12 @@ Fooddie
 
 ### Uso de IA.
 
-Lectura del proyecto: si podía leer repositorios locales y archivos .zip o .rar, y la revisión de la estructura de Fooddie.
-Validaciones: Corrección de su error de sintaxis y el cambio de "" a null.
-Registro: registro.html, el guardado sin contraseña y los errores de carga de registro.js.
-Contacto: contacto.html sin teléfono, el cambio de motivos y el guardado.
-Vistas: «Usuarios» con edición y «Mensajes enviados».
-Validación en el formulario: errores junto a cada campo, la cookie del contacto y el vaciado del formulario tras guardar.
-Borrar: delegación de eventos.
-Alergias: el bloque de HTML roto, la validación y el guardado.
-Revisiones del proyecto: varias pasadas con distintos zips para buscar y corregir errores.
+- Lectura del proyecto: si podía leer repositorios locales y archivos .zip o .rar, y la revisión de la estructura de Fooddie.
+- Validaciones: Corrección de su error de sintaxis y el cambio de "" a null.
+- Registro: registro.html, el guardado sin contraseña y los errores de carga de registro.js.
+- Contacto: contacto.html sin teléfono, el cambio de motivos y el guardado.
+- Vistas: «Usuarios» con edición y «Mensajes enviados».
+- Validación en el formulario: errores junto a cada campo, la cookie del contacto y el vaciado del formulario tras guardar.
+- Borrar: delegación de eventos.
+- Alergias: el bloque de HTML roto, la validación y el guardado.
+- Revisiones del proyecto: varias pasadas con distintos zips para buscar y corregir errores.
