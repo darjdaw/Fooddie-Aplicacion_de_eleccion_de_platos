@@ -18,20 +18,6 @@
       <input type="text" class="search-bar" placeholder="Buscar...">
     </div>
 
-    <nav class="header-nav">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a href="decidir-comida.html" class="nav-link">Decidir comida</a>
-        </li>
-        <li class="nav-item">
-          <a href="organizar-pedido.html" class="nav-link">Organizar pedido</a>
-        </li>
-        <li class="nav-item">
-          <a href="mis-colecciones.html" class="nav-link">Mis colecciones</a>
-        </li>
-      </ul>
-    </nav>
-
     <div class="header-spacer"></div>
 
     <div class="action-icons">
@@ -55,6 +41,21 @@
         <img src="src/img/burger.svg" alt="Menú" class="nav-icon">
       </button>
       <img src="src/img/profile-avatar.jpg" alt="Foto de perfil" class="profile-img">
+
+      <nav id="menu-hamburguesa" hidden>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="decidir-comida.html">Decidir comida</a></li>
+          <li><a href="organizar-pedido.html">Organizar pedido</a></li>
+          <li><a href="mis-colecciones.html">Mis colecciones</a></li>
+          <li><a href="usuarios.html">Usuarios</a></li>
+          <li><a href="mensajes.html">Mensajes enviados</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="login-screen.html">Iniciar sesión</a></li>
+          <li><a href="registro.html">Crear cuenta</a></li>
+        </ul>
+      </nav>
+
     </div>
   </div>
 </header>
@@ -182,6 +183,8 @@
     <p class="copyright">© 2026 Cádiz</p>
   </div>
 </footer>
+
+<script src="js/menu.js" defer></script>
 
 </body>
 </html>
