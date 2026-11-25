@@ -98,24 +98,6 @@ export function validarNombre(nombre) {
    return null;
 }
 
-export function validarTelefono(telefono, obligatorio) {
-   const regTelefono = /^(\+34)?[6-9][0-9]{8}$/;
-   const limpio = telefono.replace(/\s/g, "");
-
-   if (limpio === "") {
-      if (obligatorio) {
-         return "Si prefieres que te llamemos, el teléfono es obligatorio";
-      }
-      return null;
-   }
-
-   if (!regTelefono.test(limpio)) {
-      return "El teléfono no es válido (9 dígitos, por ejemplo 612 345 678)";
-   }
-
-   return null;
-}
-
 export function validarMotivo(motivo) {
    if (motivo === "") {
       return "Elige un motivo de contacto";
