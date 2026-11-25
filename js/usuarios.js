@@ -1,4 +1,3 @@
-import { obtenerTodos } from "./almacen.js";
 import { obtenerTodos, borrar } from "./almacen.js";
 
 const lista = document.getElementById("lista-usuarios");
