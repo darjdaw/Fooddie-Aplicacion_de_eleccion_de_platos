@@ -91,11 +91,14 @@ El proyecto está construido sobre el stack **MERN** (**M**ongoDB, **E**xpress.j
 | Como comensal, quiero que el precio de los platos y el total a pagar por cada persona se actualice automáticamente. | Muy Alta | Pendiente |
 | Como usuario, quiero poder crear una "sesión" (orden de comida) indicando si es a domicilio o en establecimiento, para iniciar un pedido grupal. | Alta | Pendiente |
 | Como creador de la sesión, quiero poder añadir comensales a la orden de comida para organizar el pedido de forma colaborativa. | Alta | Pendiente |
+| Como usuario, quiero consultar, editar y borrar usuarios registrados. | Alta | En desarrollo |
+| Como usuario, quiero enviar consultas, sugerencias o incidencias mediante un formulario de contacto. | Alta | Hecho |
 | Como usuario, quiero poder crear una cuenta e iniciar sesión para acceder a mis pedidos y guardar mi información. | Alta | Pendiente |
 | Como comensal, quiero poder usar etiquetas para proponer restaurantes o temáticas de comida dentro de la sesión. | Media | Pendiente |
 | Como comensal, quiero poder realizar un sorteo aleatorio entre las opciones propuestas para decidir dónde o qué pedir. | Media | Pendiente |
 | Como usuario, quiero poder crear mis propias colecciones de platos (listas de deseados o favoritos) para agilizar futuros pedidos. | Baja | Pendiente |
 | Como usuario, quiero poder explorar y navegar por colecciones de platos creadas por otros usuarios para descubrir nuevas opciones. | Baja | Pendiente |
+| Como usuario, poder indicar mis alergias y que queden reflejadas en mi perfil para evitar problemas al hacer pedidos | Baja | Hecho |
 
 ### **Mapa de pantallas:**
 
@@ -150,3 +153,64 @@ Fooddie
     └── [Global] Pie de Página (Footer)
         ├── Enlace "Política de cookies"
         └── Aviso de copyright ("© 2026 Cádiz")
+
+## Hito 2 - formularios, validación y guardado
+
+[Actualizaciones en Backlog](###backlog:)
+
+### **Mapa de validación**
+
+#### Formulario de registro
+
+| Campo | Regla | Mensaje de error |
+| :--- | :--- | :--- |
+| Nombre de usuario | Obligatorio, mínimo 3 caracteres (sin contar espacios de los extremos), máximo 20 (`maxlength`) | El nombre de usuario debe tener al menos 3 caracteres |
+| Correo electrónico | Obligatorio, formato válido con expresión regular, máximo 100 (`maxlength`) | El correo electrónico es obligatorio / El correo electrónico no es válido, comprueba los caracteres y el formato |
+| Contraseña | Mínimo 8 caracteres, una mayúscula y un número. No se pide al editar y no se guarda | La contraseña debe tener al menos 8 caracteres / ...al menos una letra mayúscula / ...al menos un número |
+| Repetir contraseña | No vacío y coincide con la contraseña | Repite la contraseña / Las contraseñas no coinciden |
+| Fecha de nacimiento | Obligatoria, no futura (el `max` del campo se pone con la fecha de hoy) y edad mínima de 14 años | La fecha de nacimiento es obligatoria / ...no puede ser futura / Debes tener al menos 14 años para registrarte |
+| Alergias | Solo obligatorio si la casilla «Tengo alergias o intolerancias» está marcada | Necesitas indicar qué alergias tienes |
+| Condiciones | La casilla debe estar marcada | Debes aceptar las condiciones para continuar |
+
+#### Formulario de contacto
+
+| Campo | Regla | Mensaje de error |
+| :--- | :--- | :--- |
+| Nombre | Mínimo 2 caracteres, máximo 50 (`maxlength`) | El nombre debe tener al menos 2 caracteres |
+| Correo electrónico | Igual que en el registro | Igual que en el registro |
+| Motivo | Hay que elegir una opción distinta de «Elige un motivo» | Elige un motivo de contacto |
+| Mensaje | Entre 10 y 500 caracteres. Los límites se leen de `minlength` y `maxlength` del HTML | El mensaje debe tener al menos 10 caracteres / El mensaje no puede superar los 500 caracteres |
+
+### Qué se ha hecho
+
+- **Capa de datos (`almacen.js`):** módulo con `obtenerTodos`, `obtenerPorId`, `crear`, `actualizar` y `borrar`. Es el único archivo que toca `localStorage`. Cada colección (`usuarios`, `mensajes`) se guarda como un array de objetos con el prefijo `fooddie_`.
+- **Validación (`validacion.js`):** cada función recibe un valor y devuelve el mensaje de error o `null`. Los dos formularios usan las mismas funciones.
+- **Formulario de registro:** nombre de usuario, correo, contraseña, repetir contraseña, fecha de nacimiento, alergias (opcional) y aceptación de condiciones. El mismo formulario sirve para crear y para editar.
+- **Vista «Usuarios»:** lista los usuarios registrados con botones para editar y borrar.
+- **Formulario de contacto:** nombre, correo, motivo y mensaje con contador de caracteres. Recuerda nombre y correo del último envío en una cookie.
+- **Vista «Mensajes enviados»:** lista los mensajes con un botón para borrar cada uno.
+- **Comportamiento común (`formularios.js`):** los campos se validan al salir de ellos y, una vez tocados, mientras se escribe. Los errores aparecen junto a cada campo con `aria-invalid` y `aria-describedby`. Al enviar se muestran todos los errores y el foco va al primer campo con error.
+
+### Decisiones tomadas
+
+- **La contraseña no se guarda.** Se valida en el formulario, pero nunca entra en el objeto que se almacena, porque no se debe guardar en claro en el navegador. Por eso tampoco se pide al editar un usuario.
+- **Edad mínima de 14 años.** Es la edad a partir de la cual en España se puede consentir el tratamiento de datos personales. Está en una constante (`EDAD_MINIMA`) y se cambia en un solo sitio.
+- **Páginas separadas.** Cada formulario y cada vista es una página HTML, igual que en el resto del proyecto.
+- **Delegación de eventos.** Hay un único `click` en cada lista que decide la acción con `data-accion` y `data-id`. No hay `onclick` en el HTML.
+
+### Qué me ha costado más
+
+- **Todo lo referente a alergias:**  los `import` y `export` necesarios entre archivos, y las llamadas a las funciones con los valores correctos. Fue lo más complejo del hito.
+- **El borrado con delegación:** conseguir que los botones se pintaran y funcionaran con un único `click` en la lista me costó bastante.
+
+### Uso de IA.
+
+Lectura del proyecto: si podía leer repositorios locales y archivos .zip o .rar, y la revisión de la estructura de Fooddie.
+Validaciones: Corrección de su error de sintaxis y el cambio de "" a null.
+Registro: registro.html, el guardado sin contraseña y los errores de carga de registro.js.
+Contacto: contacto.html sin teléfono, el cambio de motivos y el guardado.
+Vistas: «Usuarios» con edición y «Mensajes enviados».
+Validación en el formulario: errores junto a cada campo, la cookie del contacto y el vaciado del formulario tras guardar.
+Borrar: delegación de eventos.
+Alergias: el bloque de HTML roto, la validación y el guardado.
+Revisiones del proyecto: varias pasadas con distintos zips para buscar y corregir errores.
